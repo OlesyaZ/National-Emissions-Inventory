@@ -17,7 +17,8 @@ year <- unique(NEI$year)
 png(filename = "plot4.png", width = 480, height = 480, units = "px", pointsize = 12,
     bg = "white")                           
 
-plot(year,total_PM,xlim=c(1998,2008),col="red",cex=0.7,pch=19)
+plot(year,total_PM,xlim=c(1998,2008),col="red",cex=2,pch=4,
+     ylab = "Emission",main ="Coal Combustion-related Sources across USA")
 model<-lm(total_PM~year)
 abline(model,lwd=2)
 

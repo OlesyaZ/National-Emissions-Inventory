@@ -11,7 +11,7 @@ xt<-data.frame(xt)
 png(filename = "plot3.png", width = 480, height = 480, units = "px", pointsize = 12,
     bg = "white")         
 library(ggplot2)                  
-
+g<-ggplot(xt,aes(year,Freq))
 g+geom_point()+facet_grid(.~type)+geom_smooth(method="lm",aes(group = 1))
 
 dev.off()
